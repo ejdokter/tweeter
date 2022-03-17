@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  font-family: 'Bungee', cursive;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 120px;
+  width: 100%;
+  align-items: center;
+  padding: 0 1.5em 0 1.5em;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+}
+
+#rightHeader {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+  align-items: center;
+}
+
+#rightHeader > span {
+  transform: translateY(45%)
+}
+
+#rightHeader > button {
+  background: transparent;
+  border: 0;
+  color: red;
+  display: flex;
+  align-self: center;
+  transform: translateY(60%);
+}
