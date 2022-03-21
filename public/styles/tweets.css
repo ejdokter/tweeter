@@ -1,0 +1,21 @@
+article.tweet {
+  background-color: transparent;
+  border-style: solid;
+  display: flex;
+}
+
+article.tweet header {
+  background-color: transparent;
+  color: initial;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+article.tweet header img {
+  height: 25px
+}
+
+article.tweet header p {
+  margin-left: auto;
+}
