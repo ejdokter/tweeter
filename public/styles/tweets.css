@@ -1,7 +1,20 @@
+section.tweet-container {
+  width: 100%;
+  margin: auto;
+}
+
 article.tweet {
   background-color: transparent;
   border-style: solid;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
   display: flex;
+  flex-direction: column;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px rgb(147, 147, 255);
 }
 
 article.tweet header {
@@ -9,13 +22,27 @@ article.tweet header {
   color: initial;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  align-items: baseline;
 }
 
 article.tweet header img {
-  height: 25px
+  height: 25px;
+  margin: 10px
 }
 
 article.tweet header p {
   margin-left: auto;
+  margin-right: 10px;
+}
+
+article.tweet footer {
+  border-top-style: solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+article.tweet footer i:hover {
+  filter: invert(0.5) sepia(1);
 }
