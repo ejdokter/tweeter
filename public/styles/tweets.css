@@ -35,6 +35,10 @@ article.tweet header p {
   margin-right: 10px;
 }
 
+article.tweet p#content {
+  margin: 10px;
+}
+
 article.tweet footer {
   border-top-style: solid;
   display: flex;

@@ -8,7 +8,6 @@ $(document).ready(function() {
     if (remaining < 0) {
       $(".counter").css("color", "red")
     }
-    console.log(remaining)
   })
 });
 
