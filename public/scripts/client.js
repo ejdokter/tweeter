@@ -68,11 +68,20 @@ $(document).ready(function() {
   $newTweet.on('submit', function(event) {
     event.preventDefault();
     console.log('new tweet created');
-    const serializedData = $(event.target).serialize()
 
-    $.post('/tweets', serializedData, response => {
-      console.log(response)
-    })
+    if(!$newTweet.children('textarea').val()) {
+      alert('Tweet cannot be blank')
+    } else if ($newTweet.children('textarea').val().length > 140) {
+      alert('Tweet cannot exceed 140 characters')
+    } else {
+
+        const serializedData = $(event.target).serialize()
+
+        $.post('/tweets', serializedData, response => {
+          console.log(response)
+          loadTweets()
+        })
+      }
   })
 
   const loadTweets = function () {
