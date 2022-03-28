@@ -57,6 +57,11 @@
     <main class="container">       
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <div id="error-message" class="hidden">
+          <i class='fa fa-warning'></i>
+          <span></span>
+          <i class='fa fa-warning'></i>
+        </div>
           <form id="new-tweet" method="POST" action="/tweets">
             <label for="tweet-text"></label>
             <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
@@ -66,7 +71,7 @@
             </div>
           </form>
       </section>
-
+ 
       <section class="tweet-container">
         <!-- <article class="tweet">
           <header>

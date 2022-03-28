@@ -32,7 +32,16 @@ main {
   background-color: #f4f1ec;
 }
 
+#error-message {
+  border: 3px solid red;
+  color: red;
+  font-weight: 600;
+  padding: 0.5em
+}
 
+.hidden {
+  display: none;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

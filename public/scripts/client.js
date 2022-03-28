@@ -38,6 +38,11 @@ $(document).ready(function() {
     }
   }
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
   const createTweetElement = function(tweetData) {
     const $tweet = $(`<article class="tweet"></article>`)
@@ -48,7 +53,7 @@ $(document).ready(function() {
             <h3>${tweetData.user.name}</h3>
             <p>${tweetData.user.handle}</p>
           </header>
-            <p id="content">${tweetData.content.text}</p>
+            <p id="content">${escape(tweetData.content.text)}</p>
           <footer>
             <p>${timeago.format(tweetData.created_at)}</p>
             <div>
@@ -66,13 +71,16 @@ $(document).ready(function() {
   const $newTweet = $('#new-tweet');
 
   $newTweet.on('submit', function(event) {
+    $("#error-message").slideUp()
     event.preventDefault();
     console.log('new tweet created');
 
     if(!$newTweet.children('textarea').val()) {
-      alert('Tweet cannot be blank')
+      $("#error-message span").text('Tweet cannot be blank')
+      $("#error-message").slideDown()
     } else if ($newTweet.children('textarea').val().length > 140) {
-      alert('Tweet cannot exceed 140 characters')
+      $("#error-message span").text('Tweet cannot exceed 140 characters')
+      $("#error-message").slideDown()
     } else {
 
         const serializedData = $(event.target).serialize()
