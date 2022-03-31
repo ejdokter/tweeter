@@ -101,4 +101,13 @@ $(document).ready(function() {
 
   loadTweets()
 
+  const $rightHeader = $('#rightHeader')
+
+  $rightHeader.on('click', function(event) {
+    $('#new-tweet').slideToggle()
+    $('#tweet-text').focus()
+    event.preventDefault()
+    console.log('input test')
+  })
+
 })
