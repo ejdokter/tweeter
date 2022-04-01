@@ -1,4 +1,4 @@
-section.new-tweet {
+.new-tweet {
   width: 100%;
 }
 
@@ -28,8 +28,4 @@ textarea {
 output {
   font-family: 'Bungee', cursive;
   float: right;
-}
-
-@media only screen and (min-width: 1024px) {
-  
 }

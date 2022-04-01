@@ -11,6 +11,7 @@ nav {
   justify-content: space-between;
   position: fixed;
   z-index: 1;
+  transition: top 0.5s;
 }
 
 #rightHeader {
@@ -48,7 +49,9 @@ nav {
   100% { transform: translateY(-10); }
 }
 
-@media only screen and (max-width: 1024px) {
+/* SMALLER SCREEN SIZE 1023px AND LOWER */
+
+@media only screen and (max-width: 1023px) {
   nav {
     background-color: rgb(255, 136, 0);
     background-image: url(../images/blizzard.png);

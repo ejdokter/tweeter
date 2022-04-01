@@ -1,4 +1,4 @@
-header#page-header {
+#page-header {
   height: 400px;
   width: 100%;
   background-color: rgb(255, 136, 0);
@@ -10,7 +10,6 @@ header#page-header {
   align-items: center;
   position: relative;
   top: 120px;
-
 }
 
 .yourName {

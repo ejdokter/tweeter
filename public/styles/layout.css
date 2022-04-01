@@ -48,6 +48,34 @@ main {
   display: none;
 }
 
+#scroll-top {
+  font-size: 3em;
+  padding: 0.3em;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: rgb(255, 136, 0);
+  visibility: hidden;
+}
+
+#scroll-top:hover {
+  cursor: pointer;
+  color: rgb(206, 110, 0);
+}
+
+#scroll-top:active {
+  transform: translateY(5px)
+}
+
+#scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* DESKTOP SCREEN SIZE 1024px AND HIGHER */
+
 @media only screen and (min-width: 1024px) {
   body {
     flex-direction: row;
@@ -58,7 +86,7 @@ main {
     margin: 8em 2em 0em 2em;
     padding: 0;
   }
-  header#page-header {
+  #page-header {
     max-width: 25%;
     margin: 4em auto 0em 2em;
   }
